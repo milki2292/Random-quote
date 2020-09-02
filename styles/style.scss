@@ -1,0 +1,48 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+
+@mixin flexCentre {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+@mixin pddingFont {
+    padding:30px;
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    
+}
+
+body {
+    @include flexCentre();
+  .bg {
+    @include flexCentre();
+    background: rgb(30, 78, 50);
+    width: 60vh;
+    height: 60vh;
+    margin-top: 15vh;
+    button{
+        width: 150px;
+        height: 35px;
+        border: none;
+        margin-bottom: 20px;
+    }
+    .quoteBg {
+        @include flexCentre();
+      background: rgb(85, 167, 110);
+      width: 45vh;
+      height: 45vh;
+      
+      .quote{
+        @include pddingFont()
+      }
+      .source{
+        @include pddingFont()
+      }
+    }
+  }
+  
+}
